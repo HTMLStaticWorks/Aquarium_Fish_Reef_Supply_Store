@@ -78,6 +78,14 @@ a:hover {
   color: var(--color-accent);
 }
 
+/* Form Controls */
+.form-control::placeholder,
+.form-select::placeholder,
+textarea::placeholder {
+  color: var(--text-color) !important;
+  opacity: 0.5 !important;
+}
+
 /* Base Components */
 .btn-primary-custom {
   background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
@@ -300,6 +308,10 @@ a:hover {
 [dir="rtl"] .reveal-fade-right {
   transform: translateX(-50px);
 }
+[dir="rtl"] .reveal-fade-left.active,
+[dir="rtl"] .reveal-fade-right.active {
+  transform: translateX(0);
+}
 [dir="rtl"] .ms-auto {
   margin-right: auto !important;
   margin-left: 0 !important;
@@ -307,6 +319,37 @@ a:hover {
 [dir="rtl"] .me-auto {
   margin-left: auto !important;
   margin-right: 0 !important;
+}
+
+/* RTL Form and Contact Fixes */
+[dir="rtl"] input, 
+[dir="rtl"] textarea {
+  unicode-bidi: plaintext;
+  text-align: start;
+}
+
+[dir="rtl"] .password-toggle {
+  right: auto;
+  left: 15px;
+}
+
+[dir="rtl"] .footer ul li {
+  unicode-bidi: plaintext;
+  text-align: right;
+}
+
+[dir="rtl"] .contact-box p {
+  unicode-bidi: plaintext;
+  /* Removed text-align: right so it inherits center alignment from .contact-box */
+}
+
+/* Bootstrap alignment overrides for RTL if not using RTL bundle */
+[dir="rtl"] .text-start {
+  text-align: right !important;
+}
+
+[dir="rtl"] .text-end {
+  text-align: left !important;
 }
 
 /* Hero Separation */

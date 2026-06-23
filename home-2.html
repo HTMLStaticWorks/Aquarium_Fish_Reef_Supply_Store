@@ -315,6 +315,48 @@
             border-radius: 50%;
             opacity: 0.3;
         }
+
+        /* RTL Styles for Timeline */
+        [dir="rtl"] .timeline-left {
+            right: 0;
+            left: auto;
+        }
+        [dir="rtl"] .timeline-right {
+            right: 50%;
+            left: auto;
+        }
+        [dir="rtl"] .timeline-left::after {
+            left: -10px;
+            right: auto;
+        }
+        [dir="rtl"] .timeline-right::after {
+            right: -10px;
+            left: auto;
+        }
+        @media (max-width: 768px) {
+            [dir="rtl"] .timeline::after {
+                right: 31px;
+                left: auto;
+            }
+            [dir="rtl"] .timeline-item {
+                padding-right: 70px;
+                padding-left: 25px;
+                right: 0;
+                left: auto;
+            }
+            [dir="rtl"] .timeline-left::after,
+            [dir="rtl"] .timeline-right::after {
+                right: 21px;
+                left: auto;
+            }
+        }
+
+        .particle {
+            position: absolute;
+            background: var(--color-secondary);
+            border-radius: 50%;
+            opacity: 0.3;
+        }
     </style>
 </head>
 
@@ -377,7 +419,7 @@
             <p class="lead text-white opacity-75 mb-5 reveal-fade-up" style="transition-delay: 0.2s;">Create
                 breathtaking underwater landscapes with our exclusive collection of rare livestock and premium systems.
             </p>
-            <div class="reveal-fade-up d-flex gap-3 justify-content-center" style="transition-delay: 0.4s;">
+            <div class="reveal-fade-up d-flex flex-column flex-sm-row gap-3 justify-content-center align-items-center" style="transition-delay: 0.4s;">
                 <a class="btn-accent-custom btn-lg" href="gallery.html">View Galleries</a>
                 <a class="btn btn-outline-light btn-lg rounded-pill px-4" href="services.html">Explore Services</a>
             </div>
