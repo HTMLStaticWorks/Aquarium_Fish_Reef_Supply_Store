@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aquaria | Service Details</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+        /* Section 1: Hero */
+        .detail-hero {
+            height: 40vh;
+            background: linear-gradient(rgba(0,35,73,0.9), rgba(0,18,32,1)), url('assets/images/acropora_coral_1782191956890.png') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding-top: 80px;
+        }
+
+        /* Section 2: Info Layout */
+        .info-box {
+            border-left: 4px solid var(--color-secondary);
+            padding-left: 20px;
+            margin-bottom: 30px;
+        }
+        .detail-img {
+            border-radius: 30px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+        }
+
+        /* Section 3: Highlights Grid */
+        .highlight-card {
+            background: var(--card-bg);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            border: 1px solid var(--border-color);
+            transition: transform 0.4s;
+        }
+        .highlight-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--color-accent);
+        }
+        .highlight-icon {
+            font-size: 2.5rem;
+            color: var(--color-accent);
+            margin-bottom: 15px;
+        }
+
+        /* Section 4: Compatibility (Cards) */
+        .compat-row {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .compat-card {
+            flex: 0 1 300px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            position: relative;
+        }
+        .compat-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 5px;
+            background: var(--color-secondary);
+        }
+        .compat-card.warning::before { background: var(--color-accent); }
+        .compat-card.danger::before { background: #dc3545; }
+
+        /* Section 5: FAQ Accordion Motion */
+        .custom-accordion .accordion-item {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px !important;
+            margin-bottom: 15px;
+            overflow: hidden;
+        }
+        .custom-accordion .accordion-button {
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-weight: 600;
+            box-shadow: none;
+            padding: 20px;
+        }
+        .custom-accordion .accordion-button:not(.collapsed) {
+            color: var(--color-secondary);
+            background: rgba(0, 173, 181, 0.05);
+        }
+        .custom-accordion .accordion-body {
+            color: var(--text-color);
+            opacity: 0.8;
+            padding: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+    </style>
+</head>
+<body>
+<!-- Header -->
+<header class="header">
+<div class="container d-flex align-items-center justify-content-between">
+<a class="logo text-decoration-none" href="index.html">
+<h3 class="m-0 fw-bold d-flex align-items-center gap-2">
+<i class="bi bi-water text-secondary-custom"></i>
+<span>Aquaria.</span>
+</h3>
+</a>
+<nav class="header-nav">
+<a class="nav-link" href="index.html">Home 1</a>
+<a class="nav-link" href="home-2.html">Home 2</a>
+<a class="nav-link" href="about.html">About</a>
+<a class="nav-link active" href="services.html">Services</a>
+<a class="nav-link" href="blog.html">Blog</a>
+<a class="nav-link" href="gallery.html">Gallery</a>
+<a class="nav-link" href="pricing.html">Pricing</a>
+<a class="nav-link" href="contact.html">Contact</a>
+</nav>
+<div class="controls">
+<button class="theme-btn" id="theme-toggle"><i class="bi bi-sun-fill"></i></button>
+<button class="rtl-btn" id="rtl-toggle"><i class="bi bi-arrow-left-right"></i></button>
+<a class="btn-primary-custom rounded-pill px-4 py-2 text-decoration-none fw-bold text-white header-auth-btn" href="signup.html">Sign Up</a>
+<button class="btn btn-outline-secondary mobile-toggle-btn ms-2" data-bs-target="#mobileMenu" data-bs-toggle="offcanvas" style="display: none;" type="button"><i class="bi bi-list fs-3"></i></button></div>
+</div>
+</header>
+<div class="offcanvas offcanvas-end" id="mobileMenu" style="background-color: var(--bg-color);" tabindex="-1">
+<div class="offcanvas-header border-bottom border-secondary">
+<h5 class="offcanvas-title fw-bold"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" style="filter: invert(var(--bs-body-color-rgb));" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="d-flex flex-column gap-3 fs-5">
+<a class="text-decoration-none" href="index.html" style="color: var(--text-color)">Home 1</a>
+<a class="text-decoration-none" href="home-2.html" style="color: var(--text-color)">Home 2</a>
+<a class="text-decoration-none" href="about.html" style="color: var(--text-color)">About</a>
+<a class="text-decoration-none" href="services.html" style="color: var(--text-color)">Services</a>
+<a class="text-decoration-none" href="gallery.html" style="color: var(--text-color)">Gallery</a>
+<a class="text-decoration-none" href="pricing.html" style="color: var(--text-color)">Pricing</a>
+<a class="text-decoration-none" href="contact.html" style="color: var(--text-color)">Contact</a>
+<a class="btn-primary-custom text-center mt-4" href="login.html">Login</a>
+</div>
+</div>
+</div>
+
+<!-- Section 1: Hero -->
+<section class="detail-hero reveal-fade-up">
+<div class="container">
+<h1 class="display-4 fw-bold text-white mb-3">Live SPS Corals</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb justify-content-center">
+<li class="breadcrumb-item"><a class="text-secondary-custom" href="services.html">Services</a></li>
+<li aria-current="page" class="breadcrumb-item active text-white opacity-75">SPS Corals</li>
+</ol>
+</nav>
+</div>
+</section>
+<!-- Section 2: Detailed Service Info -->
+<section class="py-5 my-5">
+<div class="container">
+<div class="row align-items-center gx-5">
+<div class="col-lg-6 mb-5 mb-lg-0 reveal-fade-right">
+<div class="info-box">
+<h2 class="display-6 fw-bold mb-3">The Pinnacle of Reef Keeping</h2>
+<p class="text-muted">Small Polyp Stony (SPS) corals are widely considered the holy grail of the marine aquarium hobby. Demanding high water flow, pristine water chemistry, and intense lighting, keeping SPS corals thriving is a rewarding challenge.</p>
+</div>
+<p class="text-muted mb-4">Our aquaculture facility specializes in cultivating rare strains of Acropora, Montipora, and Stylophora. By purchasing aquacultured frags, you are getting corals that are already adapted to aquarium life, making them hardier and more resilient than wild-caught colonies.</p>
+<ul class="list-unstyled d-flex flex-column gap-3 mb-4">
+<li><i class="bi bi-check2-circle text-secondary-custom me-2"></i> Over 50 unique color morphs</li>
+<li><i class="bi bi-check2-circle text-secondary-custom me-2"></i> 100% pest-free guarantee</li>
+<li><i class="bi bi-check2-circle text-secondary-custom me-2"></i> Shipped overnight in temperature-controlled boxes</li>
+</ul>
+</div>
+<div class="col-lg-6 reveal-fade-left">
+<img alt="SPS Coral" class="img-fluid detail-img w-100" src="assets/images/acropora_coral_1782191956890.png"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 3: Product Highlights -->
+<section class="py-5 bg-opacity-10" style="background-color: var(--color-primary);">
+<div class="container py-5">
+<div class="text-center mb-5 reveal-fade-up">
+<h2 class="display-6 fw-bold">Care <span class="text-accent-custom">Requirements</span></h2>
+</div>
+<div class="row g-4 justify-content-center reveal-fade-up">
+<div class="col-lg-3 col-md-6">
+<div class="highlight-card h-100">
+<i class="bi bi-brightness-high highlight-icon"></i>
+<h5 class="fw-bold">High PAR Lighting</h5>
+<p class="text-muted small mb-0">Requires 250-400 PAR for optimal coloration and growth rates.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="highlight-card h-100">
+<i class="bi bi-water highlight-icon"></i>
+<h5 class="fw-bold">Strong Flow</h5>
+<p class="text-muted small mb-0">Random, turbulent flow is necessary to keep detritus from settling.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="highlight-card h-100">
+<i class="bi bi-droplet-half highlight-icon"></i>
+<h5 class="fw-bold">Pristine Water</h5>
+<p class="text-muted small mb-0">Nitrates &lt; 5ppm and Phosphates &lt; 0.03ppm are highly recommended.</p>
+</div>
+</div>
+<div class="col-lg-3 col-md-6">
+<div class="highlight-card h-100">
+<i class="bi bi-thermometer highlight-icon"></i>
+<h5 class="fw-bold">Stability</h5>
+<p class="text-muted small mb-0">Alkalinity, Calcium, and Magnesium levels must remain rock solid.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 4: Compatibility Recommendations -->
+<section class="py-5 my-5">
+<div class="container">
+<h2 class="display-6 fw-bold text-center mb-5 reveal-fade-up">Tankmate <span class="text-secondary-custom">Compatibility</span></h2>
+<div class="compat-row reveal-fade-up" style="transition-delay: 0.2s;">
+<div class="compat-card p-4">
+<h5 class="fw-bold mb-3"><i class="bi bi-check-circle-fill text-success me-2"></i> Reef Safe Fish</h5>
+<p class="text-muted small mb-0">Tangs, Wrasses, Anthias, and Clownfish are perfect companions. They won't nip at the polyps.</p>
+</div>
+<div class="compat-card warning p-4">
+<h5 class="fw-bold mb-3"><i class="bi bi-exclamation-triangle-fill text-warning me-2"></i> Angelfish</h5>
+<p class="text-muted small mb-0">Dwarf and large angelfish may occasionally nip at SPS polyps. Add with caution.</p>
+</div>
+<div class="compat-card danger p-4">
+<h5 class="fw-bold mb-3"><i class="bi bi-x-circle-fill text-danger me-2"></i> Non-Reef Safe</h5>
+<p class="text-muted small mb-0">Puffers, Triggerfish, and large wrasses may break or consume the coral skeleton.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Section 5: FAQ -->
+<section class="py-5 mb-5">
+<div class="container max-w-800 mx-auto" style="max-width: 800px;">
+<div class="text-center mb-5 reveal-fade-up">
+<h2 class="display-6 fw-bold">Frequently Asked <span class="text-secondary-custom">Questions</span></h2>
+</div>
+<div class="accordion custom-accordion reveal-fade-up" id="faqAccordion">
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button" data-bs-target="#faq1" data-bs-toggle="collapse" type="button">
+                            Do you guarantee live arrival?
+                        </button>
+</h2>
+<div class="accordion-collapse collapse show" data-bs-parent="#faqAccordion" id="faq1">
+<div class="accordion-body">
+                            Yes, we offer a 100% Live Arrival Guarantee. If your coral arrives dead on arrival (DOA), please send us clear pictures in the original bag within 2 hours of delivery for a full credit.
+                        </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-target="#faq2" data-bs-toggle="collapse" type="button">
+                            How big are the frags?
+                        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq2">
+<div class="accordion-body">
+                            Our standard SPS frags are between 1" and 1.5" tall, fully encrusted on a ceramic plug, and showing healthy polyp extension before shipping.
+                        </div>
+</div>
+</div>
+<div class="accordion-item">
+<h2 class="accordion-header">
+<button class="accordion-button collapsed" data-bs-target="#faq3" data-bs-toggle="collapse" type="button">
+                            Should I dip the corals before adding to my tank?
+                        </button>
+</h2>
+<div class="accordion-collapse collapse" data-bs-parent="#faqAccordion" id="faq3">
+<div class="accordion-body">
+                            While we maintain a strict pest-free facility and dip everything, it is an industry best practice to ALWAYS dip new corals in a commercial coral dip before adding them to your display tank or quarantine system.
+                        </div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Call To Action -->
+<section class="py-5 mt-5">
+<div class="container">
+<div class="text-center py-5 px-4 reveal-zoom-in border border-secondary border-opacity-25 rounded-4 bg-opacity-10" style="background-color: var(--color-primary); box-shadow: 0 10px 30px rgba(0,0,0,0.2);">
+<h2 class="display-4 fw-bold mb-4">Ready to <span class="text-secondary-custom">Dive In?</span></h2>
+<p class="lead text-muted mb-5 mx-auto" style="max-width: 600px;">Whether you're starting your first nano reef or upgrading to a massive custom build, our experts are here to help.</p>
+<div class="d-flex justify-content-center gap-3 flex-wrap">
+<a class="btn-primary-custom btn-lg" href="contact.html">Get in Touch</a>
+<a class="btn btn-outline-secondary btn-lg rounded-pill px-4" href="booking.html">Book Consultation</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="footer">
+<div class="container">
+<div class="row gy-5">
+<div class="col-lg-4 pe-lg-5">
+<h3 class="fw-bold text-white mb-4"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h3>
+<p class="opacity-75 mb-4">Your premium destination for luxury aquarium supplies, rare corals, and exotic marine fish. We build ecosystems, not just fish tanks.</p>
+<div class="d-flex gap-3">
+<a class="fs-4" href="#"><i class="bi bi-instagram"></i></a>
+<a class="fs-4" href="#"><i class="bi bi-facebook"></i></a>
+<a class="fs-4" href="#"><i class="bi bi-youtube"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<h5 class="text-white fw-bold mb-4">Quick Links</h5>
+<ul class="list-unstyled d-flex flex-column gap-2">
+<li><a class="text-decoration-none" href="about.html">Our Story</a></li>
+<li><a class="text-decoration-none" href="services.html">Services</a></li>
+<li><a class="text-decoration-none" href="gallery.html">Gallery</a></li>
+<li><a class="text-decoration-none" href="pricing.html">Pricing</a></li>
+<li><a class="text-decoration-none" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-md-4">
+<h5 class="text-white fw-bold mb-4">Resources</h5>
+<ul class="list-unstyled d-flex flex-column gap-2">
+<li><a class="text-decoration-none" href="blog.html">Care Guides</a></li>
+<li><a class="text-decoration-none" href="#">Compatibility</a></li>
+<li><a class="text-decoration-none" href="#">Shipping Info</a></li>
+<li><a class="text-decoration-none" href="#">Returns</a></li>
+<li><a class="text-decoration-none" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4">
+<h5 class="text-white fw-bold mb-4">Contact Info</h5>
+<ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+<li><i class="bi bi-geo-alt me-2 text-secondary-custom"></i> 123 Ocean Drive, Miami, FL 33139</li>
+<li><i class="bi bi-telephone me-2 text-secondary-custom"></i> +1 (555) 123-4567</li>
+<li><i class="bi bi-envelope me-2 text-secondary-custom"></i> support@aquaria.com</li>
+</ul>
+</div>
+</div>
+<hr class="mt-5 mb-4 border-secondary opacity-25"/>
+<div class="row align-items-center">
+<div class="col-md-6 text-center text-md-start">
+<p class="mb-0 opacity-75 small">© 2026 Aquaria Reef Supply. All rights reserved.</p>
+</div>
+<div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+<button class="btn btn-sm btn-outline-secondary rounded-circle" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="bi bi-arrow-up"></i></button>
+</div>
+</div>
+</div>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

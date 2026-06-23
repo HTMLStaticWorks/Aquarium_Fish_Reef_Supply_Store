@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aquaria | Contact Us</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+        .contact-hero { padding: 150px 0 80px; background: linear-gradient(rgba(0,18,32,0.7), rgba(0,18,32,0.9)), url('assets/images/hero_reef_1_1782191871830.png') center/cover no-repeat; }
+        .contact-box { background: var(--card-bg); border: 1px solid var(--border-color); border-radius: 20px; padding: 40px; height: 100%; text-align: center; }
+        .form-control { background: transparent; border: none; border-bottom: 2px solid var(--border-color); color: var(--text-color); border-radius: 0; padding: 15px 0; }
+        .form-control:focus { background: transparent; color: var(--text-color); border-color: var(--color-secondary); box-shadow: none; }
+        .form-control::placeholder { color: var(--text-color); opacity: 0.5; }
+        .social-hover { transition: all 0.3s ease; color: var(--text-color); }
+        .social-hover:hover { transform: translateY(-5px); background-color: var(--color-secondary) !important; color: #fff !important; border-color: var(--color-secondary) !important; box-shadow: 0 5px 15px rgba(0, 173, 181, 0.4); }
+    </style>
+</head>
+<body>
+<header class="header">
+<div class="container d-flex align-items-center justify-content-between">
+<a class="logo text-decoration-none" href="index.html">
+<h3 class="m-0 fw-bold d-flex align-items-center gap-2">
+<i class="bi bi-water text-secondary-custom"></i>
+<span>Aquaria.</span>
+</h3>
+</a>
+<nav class="header-nav">
+<a class="nav-link" href="index.html">Home 1</a>
+<a class="nav-link" href="home-2.html">Home 2</a>
+<a class="nav-link" href="about.html">About</a>
+<a class="nav-link" href="services.html">Services</a>
+<a class="nav-link" href="blog.html">Blog</a>
+<a class="nav-link" href="gallery.html">Gallery</a>
+<a class="nav-link" href="pricing.html">Pricing</a>
+<a class="nav-link active" href="contact.html">Contact</a>
+</nav>
+<div class="controls">
+<button class="theme-btn" id="theme-toggle"><i class="bi bi-sun-fill"></i></button>
+<button class="rtl-btn" id="rtl-toggle"><i class="bi bi-arrow-left-right"></i></button>
+<a class="btn-primary-custom rounded-pill px-4 py-2 text-decoration-none fw-bold text-white header-auth-btn" href="signup.html">Sign Up</a>
+<button class="btn btn-outline-secondary mobile-toggle-btn ms-2" data-bs-target="#mobileMenu" data-bs-toggle="offcanvas" style="display: none;" type="button"><i class="bi bi-list fs-3"></i></button></div>
+</div>
+</header>
+<div class="offcanvas offcanvas-end" id="mobileMenu" style="background-color: var(--bg-color);" tabindex="-1">
+<div class="offcanvas-header border-bottom border-secondary">
+<h5 class="offcanvas-title fw-bold"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h5>
+<button aria-label="Close" class="btn-close" data-bs-dismiss="offcanvas" style="filter: invert(var(--bs-body-color-rgb));" type="button"></button>
+</div>
+<div class="offcanvas-body">
+<div class="d-flex flex-column gap-3 fs-5">
+<a class="text-decoration-none" href="index.html" style="color: var(--text-color)">Home 1</a>
+<a class="text-decoration-none" href="home-2.html" style="color: var(--text-color)">Home 2</a>
+<a class="text-decoration-none" href="about.html" style="color: var(--text-color)">About</a>
+<a class="text-decoration-none" href="services.html" style="color: var(--text-color)">Services</a>
+<a class="text-decoration-none" href="gallery.html" style="color: var(--text-color)">Gallery</a>
+<a class="text-decoration-none" href="pricing.html" style="color: var(--text-color)">Pricing</a>
+<a class="text-decoration-none" href="contact.html" style="color: var(--text-color)">Contact</a>
+<a class="btn-primary-custom text-center mt-4" href="login.html">Login</a>
+</div>
+</div>
+</div>
+
+<!-- 1. Hero -->
+<section class="contact-hero text-center reveal-fade-up">
+<div class="container">
+<h1 class="display-3 fw-bold text-white mb-3">Get in <span class="text-secondary-custom">Touch</span></h1>
+<p class="lead text-white opacity-75">Have questions about livestock compatibility or our equipment? Reach out to our experts.</p>
+</div>
+</section>
+<div class="container py-5 my-5">
+<div class="row g-5">
+<div class="col-lg-5">
+<!-- 2. Contact Info -->
+<div class="row g-4 mb-5">
+<div class="col-sm-6 reveal-fade-right" style="transition-delay: 0s;">
+<div class="contact-box">
+<i class="bi bi-telephone text-secondary-custom fs-1 mb-3 d-block"></i>
+<h5 class="fw-bold">Call Us</h5>
+<p class="text-muted small mb-0">+1 (555) 123-4567<br/>Mon-Sat, 9am - 7pm</p>
+</div>
+</div>
+<div class="col-sm-6 reveal-fade-right" style="transition-delay: 0.1s;">
+<div class="contact-box">
+<i class="bi bi-envelope text-accent-custom fs-1 mb-3 d-block"></i>
+<h5 class="fw-bold">Email Us</h5>
+<p class="text-muted small mb-0">support@aquaria.com<br/>sales@aquaria.com</p>
+</div>
+</div>
+</div>
+<!-- 3. Store Location -->
+<div class="contact-box reveal-fade-up mb-4" style="height: auto;">
+<i class="bi bi-geo-alt text-primary fs-1 mb-3 d-block"></i>
+<h5 class="fw-bold">Store Location</h5>
+<p class="text-muted mb-0">123 Ocean Drive<br/>Miami, FL 33139<br/>United States</p>
+</div>
+<!-- 4. Social Links -->
+<div class="contact-box reveal-fade-up py-4" style="height: auto;">
+<h5 class="fw-bold mb-3">Connect With Us</h5>
+<div class="d-flex justify-content-center gap-3">
+<a class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center social-hover" href="#" style="width: 45px; height: 45px;"><i class="bi bi-instagram fs-5"></i></a>
+<a class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center social-hover" href="#" style="width: 45px; height: 45px;"><i class="bi bi-facebook fs-5"></i></a>
+<a class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center social-hover" href="#" style="width: 45px; height: 45px;"><i class="bi bi-twitter fs-5"></i></a>
+<a class="btn btn-outline-secondary rounded-circle d-flex align-items-center justify-content-center social-hover" href="#" style="width: 45px; height: 45px;"><i class="bi bi-youtube fs-5"></i></a>
+</div>
+</div>
+</div>
+<div class="col-lg-7">
+<!-- 4. Contact Form -->
+<div class="contact-box text-start p-lg-5 reveal-fade-left">
+<h3 class="fw-bold mb-4">Send a Message</h3>
+<form class="row g-4">
+<div class="col-md-6"><input class="form-control" placeholder="Your Name" required="" type="text"/></div>
+<div class="col-md-6"><input class="form-control" placeholder="Email Address" required="" type="email"/></div>
+<div class="col-12"><input class="form-control" placeholder="Subject" type="text"/></div>
+<div class="col-12"><textarea class="form-control" placeholder="Message Details..." required="" rows="5"></textarea></div>
+<div class="col-12 mt-4"><button class="btn-primary-custom px-5" type="submit">Send Message</button></div>
+</form>
+</div>
+</div>
+</div>
+</div>
+<!-- Full Width Map -->
+<div class="w-100" style="height: 450px;">
+<iframe allowfullscreen="" height="100%" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d114964.53925916665!2d-80.29949920268636!3d25.782390733064336!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88d9b0a20ec8c111%3A0xff96f271ddad4f65!2sMiami%2C%20FL!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" style="border:0; display: block;" width="100%"></iframe>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<footer class="footer">
+<div class="container">
+<div class="row gy-5">
+<div class="col-lg-4 pe-lg-5">
+<h3 class="fw-bold text-white mb-4"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h3>
+<p class="opacity-75 mb-4">Your premium destination for luxury aquarium supplies, rare corals, and exotic marine fish. We build ecosystems, not just fish tanks.</p>
+<div class="d-flex gap-3">
+<a class="fs-4" href="#"><i class="bi bi-instagram"></i></a>
+<a class="fs-4" href="#"><i class="bi bi-facebook"></i></a>
+<a class="fs-4" href="#"><i class="bi bi-youtube"></i></a>
+</div>
+</div>
+<div class="col-lg-2 col-md-4">
+<h5 class="text-white fw-bold mb-4">Quick Links</h5>
+<ul class="list-unstyled d-flex flex-column gap-2">
+<li><a class="text-decoration-none" href="about.html">Our Story</a></li>
+<li><a class="text-decoration-none" href="services.html">Services</a></li>
+<li><a class="text-decoration-none" href="gallery.html">Gallery</a></li>
+<li><a class="text-decoration-none" href="pricing.html">Pricing</a></li>
+<li><a class="text-decoration-none" href="contact.html">Contact</a></li>
+</ul>
+</div>
+<div class="col-lg-2 col-md-4">
+<h5 class="text-white fw-bold mb-4">Resources</h5>
+<ul class="list-unstyled d-flex flex-column gap-2">
+<li><a class="text-decoration-none" href="blog.html">Care Guides</a></li>
+<li><a class="text-decoration-none" href="#">Compatibility</a></li>
+<li><a class="text-decoration-none" href="#">Shipping Info</a></li>
+<li><a class="text-decoration-none" href="#">Returns</a></li>
+<li><a class="text-decoration-none" href="#">FAQ</a></li>
+</ul>
+</div>
+<div class="col-lg-4 col-md-4">
+<h5 class="text-white fw-bold mb-4">Contact Info</h5>
+<ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+<li><i class="bi bi-geo-alt me-2 text-secondary-custom"></i> 123 Ocean Drive, Miami, FL 33139</li>
+<li><i class="bi bi-telephone me-2 text-secondary-custom"></i> +1 (555) 123-4567</li>
+<li><i class="bi bi-envelope me-2 text-secondary-custom"></i> support@aquaria.com</li>
+</ul>
+</div>
+</div>
+<hr class="mt-5 mb-4 border-secondary opacity-25"/>
+<div class="row align-items-center">
+<div class="col-md-6 text-center text-md-start">
+<p class="mb-0 opacity-75 small">© 2026 Aquaria Reef Supply. All rights reserved.</p>
+</div>
+<div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+<button class="btn btn-sm btn-outline-secondary rounded-circle" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="bi bi-arrow-up"></i></button>
+</div>
+</div>
+</div>
+</footer>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

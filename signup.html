@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+
+<html data-theme="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aquaria | Sign Up</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<style>
+        body {
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            color: var(--text-color);
+        }
+        .signup-wrapper {
+            position: relative;
+            z-index: 10;
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+        .signup-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            padding: 50px 40px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        .form-control { background: transparent; border: 1px solid var(--border-color); color: var(--text-color); padding: 15px; border-radius: 12px; }
+        .form-control:focus { background: transparent; color: var(--text-color); border-color: var(--color-secondary); box-shadow: none; }
+        .form-control::placeholder { color: var(--text-color); opacity: 0.5; }
+        .top-controls { position: absolute; top: 30px; right: 30px; z-index: 100; }
+        .top-controls button { color: var(--text-color) !important; border-color: var(--border-color); background: var(--card-bg); }
+        .password-toggle { position: absolute; right: 15px; top: 15px; cursor: pointer; color: var(--text-color); opacity: 0.5; }
+        .social-btn { background: transparent; color: var(--text-color); border: 1px solid var(--border-color); transition: 0.3s; }
+        .social-btn:hover { background: rgba(0, 173, 181, 0.1); border-color: var(--color-secondary); color: var(--text-color); }
+        @media (max-width: 991px) {
+            .top-controls { top: 15px; right: 15px; }
+            .signup-wrapper { padding-top: 80px; }
+        }
+    </style>
+</head>
+<body>
+<div class="top-controls controls">
+<button class="theme-btn" id="theme-toggle"><i class="bi bi-sun-fill"></i></button>
+<button class="rtl-btn" id="rtl-toggle"><i class="bi bi-arrow-left-right"></i></button>
+<button class="btn btn-outline-secondary mobile-toggle-btn ms-2" data-bs-target="#mobileMenu" data-bs-toggle="offcanvas" style="display: none;" type="button"><i class="bi bi-list fs-3"></i></button></div>
+<div class="signup-wrapper">
+<div class="signup-card">
+<div class="text-center mb-4">
+<a class="text-decoration-none d-inline-flex align-items-center gap-2" href="index.html" style="color: var(--text-color);">
+<i class="bi bi-water display-4 text-secondary-custom"></i>
+<h2 class="fw-bold mb-0">Aquaria.</h2>
+</a>
+</div>
+<h3 class="fw-bold mb-2 text-center">Create Account</h3>
+<p class="opacity-75 small text-center mb-4">Join our community of passionate reefers today.</p>
+<form>
+<div class="mb-3">
+<input class="form-control" placeholder="Full Name" required="" type="text"/>
+</div>
+<div class="mb-3">
+<input class="form-control" placeholder="Email Address" required="" type="email"/>
+</div>
+<div class="mb-3 position-relative">
+<input class="form-control" id="pwd1" placeholder="Password" required="" type="password"/>
+<i class="bi bi-eye password-toggle" onclick="const p=document.getElementById('pwd1'); if(p.type==='password'){p.type='text'; this.classList.replace('bi-eye','bi-eye-slash');}else{p.type='password'; this.classList.replace('bi-eye-slash','bi-eye');}"></i>
+</div>
+<div class="mb-3 position-relative">
+<input class="form-control" id="pwd2" placeholder="Confirm Password" required="" type="password"/>
+<i class="bi bi-eye password-toggle" onclick="const p=document.getElementById('pwd2'); if(p.type==='password'){p.type='text'; this.classList.replace('bi-eye','bi-eye-slash');}else{p.type='password'; this.classList.replace('bi-eye-slash','bi-eye');}"></i>
+</div>
+<div class="form-check mb-4 opacity-75 small text-start">
+<input class="form-check-input" id="termsCheck" required="" type="checkbox" value=""/>
+<label class="form-check-label" for="termsCheck">
+                            I agree to the <a class="text-secondary-custom text-decoration-none" href="#">Terms &amp; Conditions</a>
+</label>
+</div>
+<button class="btn-accent-custom w-100 py-3 mb-4" type="submit">Sign Up</button>
+<div class="position-relative text-center mb-4">
+<hr class="border-secondary opacity-25"/>
+<span class="position-absolute top-50 start-50 translate-middle px-3 small opacity-75" style="background: var(--card-bg);">Or register with</span>
+</div>
+<div class="d-flex justify-content-center gap-3">
+<button class="btn social-btn rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" type="button"><i class="bi bi-google fs-5"></i></button>
+<button class="btn social-btn rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" type="button"><i class="bi bi-facebook fs-5"></i></button>
+<button class="btn social-btn rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;" type="button"><i class="bi bi-apple fs-5"></i></button>
+</div>
+<div class="text-center mt-4">
+<span class="opacity-75 small">Already have an account? <a class="text-secondary-custom fw-bold text-decoration-none" href="login.html">Login</a></span>
+</div>
+</form>
+</div>
+</div>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

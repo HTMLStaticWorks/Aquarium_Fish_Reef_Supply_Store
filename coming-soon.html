@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aquaria | Coming Soon</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            background: linear-gradient(rgba(0,18,32,0.8), rgba(0,35,73,0.9)), url('assets/images/acropora_coral_1782191956890.png') center/cover fixed;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .cs-content { position: relative; z-index: 10; padding: 20px; }
+        .countdown { display: flex; gap: 20px; justify-content: center; margin: 40px 0; flex-wrap: wrap; }
+        .cd-item {
+            background: rgba(255,255,255,0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 20px;
+            padding: 20px 30px;
+            min-width: 120px;
+        }
+        .cd-number { font-size: 3.5rem; font-weight: 800; color: var(--color-secondary); line-height: 1; }
+        .cd-label { font-size: 0.9rem; text-transform: uppercase; letter-spacing: 2px; color: #fff; opacity: 0.7; margin-top: 10px; }
+        .form-control { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); color: #fff; }
+        .form-control:focus { background: rgba(255,255,255,0.15); color: #fff; border-color: var(--color-secondary); }
+        .social-icons a { display: inline-flex; align-items: center; justify-content: center; width: 45px; height: 45px; border-radius: 50%; background: rgba(255,255,255,0.1); color: #fff; font-size: 1.2rem; transition: 0.3s; }
+        .social-icons a:hover { background: var(--color-secondary); transform: translateY(-3px); }
+    </style>
+</head>
+<body>
+
+    <div id="hero-bubbles"></div> <!-- Global bubbles -->
+
+    <div class="cs-content container">
+        <h1 class="display-2 fw-bold text-white mb-3">Something <span class="text-secondary-custom">Deep</span> is Coming</h1>
+        <p class="lead text-white opacity-75 max-w-600 mx-auto">We are preparing an exclusive collection of ultra-rare corals. Get ready to upgrade your reef.</p>
+        
+        <div class="countdown" id="countdown">
+            <div class="cd-item"><div class="cd-number" id="days">14</div><div class="cd-label">Days</div></div>
+            <div class="cd-item"><div class="cd-number" id="hours">08</div><div class="cd-label">Hours</div></div>
+            <div class="cd-item"><div class="cd-number" id="minutes">45</div><div class="cd-label">Minutes</div></div>
+            <div class="cd-item"><div class="cd-number" id="seconds">12</div><div class="cd-label">Seconds</div></div>
+        </div>
+
+        <div class="max-w-500 mx-auto mt-5" style="max-width: 500px;">
+            <p class="text-white opacity-75 mb-3">Notify me when it drops:</p>
+            <form class="d-flex gap-2 mb-5">
+                <input type="email" class="form-control rounded-pill px-4" placeholder="Email Address" required>
+                <button type="submit" class="btn-accent-custom px-4">Subscribe</button>
+            </form>
+            
+            <div class="social-icons d-flex gap-3 justify-content-center">
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 pe-lg-5">
+                    <h3 class="fw-bold text-white mb-4"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h3>
+                    <p class="opacity-75 mb-4">Your premium destination for luxury aquarium supplies, rare corals, and exotic marine fish. We build ecosystems, not just fish tanks.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="about.html" class="text-decoration-none">Our Story</a></li>
+                        <li><a href="services.html" class="text-decoration-none">Services</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Resources</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="blog.html" class="text-decoration-none">Care Guides</a></li>
+                        <li><a href="#" class="text-decoration-none">Compatibility</a></li>
+                        <li><a href="#" class="text-decoration-none">Shipping Info</a></li>
+                        <li><a href="#" class="text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                        <li><i class="bi bi-geo-alt me-2 text-secondary-custom"></i> 123 Ocean Drive, Miami, FL 33139</li>
+                        <li><i class="bi bi-telephone me-2 text-secondary-custom"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-envelope me-2 text-secondary-custom"></i> support@aquaria.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75 small">&copy; 2026 Aquaria Reef Supply. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    
+                    
+                    <button class="btn btn-sm btn-outline-secondary rounded-circle" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="bi bi-arrow-up"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script src="assets/js/main.js"></script>
+    <footer class="footer">
+        <div class="container">
+            <div class="row gy-5">
+                <div class="col-lg-4 pe-lg-5">
+                    <h3 class="fw-bold text-white mb-4"><i class="bi bi-water text-secondary-custom"></i> Aquaria.</h3>
+                    <p class="opacity-75 mb-4">Your premium destination for luxury aquarium supplies, rare corals, and exotic marine fish. We build ecosystems, not just fish tanks.</p>
+                    <div class="d-flex gap-3">
+                        <a href="#" class="fs-4"><i class="bi bi-instagram"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-facebook"></i></a>
+                        <a href="#" class="fs-4"><i class="bi bi-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Quick Links</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="about.html" class="text-decoration-none">Our Story</a></li>
+                        <li><a href="services.html" class="text-decoration-none">Services</a></li>
+                        <li><a href="gallery.html" class="text-decoration-none">Gallery</a></li>
+                        <li><a href="pricing.html" class="text-decoration-none">Pricing</a></li>
+                        <li><a href="contact.html" class="text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Resources</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-2">
+                        <li><a href="blog.html" class="text-decoration-none">Care Guides</a></li>
+                        <li><a href="#" class="text-decoration-none">Compatibility</a></li>
+                        <li><a href="#" class="text-decoration-none">Shipping Info</a></li>
+                        <li><a href="#" class="text-decoration-none">Returns</a></li>
+                        <li><a href="#" class="text-decoration-none">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 col-md-4">
+                    <h5 class="text-white fw-bold mb-4">Contact Info</h5>
+                    <ul class="list-unstyled d-flex flex-column gap-3 opacity-75">
+                        <li><i class="bi bi-geo-alt me-2 text-secondary-custom"></i> 123 Ocean Drive, Miami, FL 33139</li>
+                        <li><i class="bi bi-telephone me-2 text-secondary-custom"></i> +1 (555) 123-4567</li>
+                        <li><i class="bi bi-envelope me-2 text-secondary-custom"></i> support@aquaria.com</li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="mt-5 mb-4 border-secondary opacity-25">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0 opacity-75 small">&copy; 2026 Aquaria Reef Supply. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end mt-3 mt-md-0">
+                    
+                    
+                    <button class="btn btn-sm btn-outline-secondary rounded-circle" onclick="window.scrollTo({top: 0, behavior: 'smooth'});"><i class="bi bi-arrow-up"></i></button>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+<script>
+        // Simple mock countdown timer script
+        setInterval(() => {
+            const secEl = document.getElementById('seconds');
+            let sec = parseInt(secEl.innerText);
+            if(sec > 0) { secEl.innerText = (sec - 1).toString().padStart(2, '0'); }
+            else { secEl.innerText = "59"; /* Just looping seconds for visual demo */ }
+        }, 1000);
+    </script>
+</body>
+</html>
+
