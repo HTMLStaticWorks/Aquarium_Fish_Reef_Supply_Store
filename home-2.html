@@ -83,6 +83,12 @@
             color: white;
             transform: rotateY(180deg);
         }
+        
+        /* Ensure text elements inside the back of the card inherit the white color */
+        .flip-card-back h4,
+        .flip-card-back li {
+            color: white !important;
+        }
 
         .flip-img {
             width: 100px;
@@ -402,8 +408,9 @@
                 <a class="text-decoration-none" href="index.html" style="color: var(--text-color)">Home 1</a>
                 <a class="text-decoration-none" href="home-2.html" style="color: var(--text-color)">Home 2</a>
                 <a class="text-decoration-none" href="about.html" style="color: var(--text-color)">About</a>
-                <a class="text-decoration-none" href="services.html" style="color: var(--text-color)">Services</a>
-                <a class="text-decoration-none" href="gallery.html" style="color: var(--text-color)">Gallery</a>
+                <a href="services.html" class="text-decoration-none" style="color: var(--text-color)">Services</a>
+                <a href="blog.html" class="text-decoration-none" style="color: var(--text-color)">Blog</a>
+                <a href="gallery.html" class="text-decoration-none" style="color: var(--text-color)">Gallery</a>
                 <a class="text-decoration-none" href="pricing.html" style="color: var(--text-color)">Pricing</a>
                 <a class="text-decoration-none" href="contact.html" style="color: var(--text-color)">Contact</a>
                 <a class="btn-primary-custom text-center mt-4" href="login.html">Login</a>

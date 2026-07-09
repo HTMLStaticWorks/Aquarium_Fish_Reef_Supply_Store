@@ -91,6 +91,19 @@
             animation: float 7s ease-in-out infinite reverse;
         }
 
+        @media (max-width: 991px) {
+            .ffc-1 { left: 20px; }
+            .ffc-2 { right: 20px; }
+            .hero-text-box { padding: 3rem 1.5rem; }
+        }
+
+        @media (max-width: 767px) {
+            .ffc-1 { left: 10px; top: 10%; }
+            .ffc-2 { right: 10px; bottom: 10%; }
+            .hero-text-box { padding: 2rem 1rem; }
+            .hero-title { font-size: 2.2rem !important; }
+        }
+
         /* Section 2: Product Stagger */
         .fish-grid {
             display: grid;
@@ -202,13 +215,56 @@
         }
 
         .equip-card {
-            background: var(--card-bg);
+            background-color: var(--card-bg);
             border-radius: 20px;
             padding: 30px;
             border: 1px solid var(--border-color);
             transition: 0.3s;
+            background-size: cover;
+            background-position: center;
+            position: relative;
+            z-index: 1;
+            overflow: hidden;
         }
 
+        .equip-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; right: 0; bottom: 0;
+            background-color: #000;
+            opacity: 0.6; /* Consistent dark overlay ensures white text is always legible */
+            z-index: -1;
+            transition: 0.3s;
+        }
+        
+        /* Ensure all text is above the overlay and always white for contrast against images */
+        .equip-card > * {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .equip-card h4, 
+        .equip-card p, 
+        .equip-card a {
+            color: #fff !important;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+            transition: 0.3s;
+        }
+        
+        .equip-card:hover::before {
+            opacity: 0.3; /* Reveal more of the background image on hover */
+        }
+        
+        .equip-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+        }
+        
+        .equip-card:hover h4, 
+        .equip-card:hover p, 
+        .equip-card:hover a {
+            text-shadow: 0 2px 8px rgba(0,0,0,0.9);
+        }
         /* Section 5: Magazine Layout */
         .magazine-main {
             border-radius: 30px;
@@ -323,6 +379,7 @@
                 <a href="home-2.html" class="text-decoration-none" style="color: var(--text-color)">Home 2</a>
                 <a href="about.html" class="text-decoration-none" style="color: var(--text-color)">About</a>
                 <a href="services.html" class="text-decoration-none" style="color: var(--text-color)">Services</a>
+                <a href="blog.html" class="text-decoration-none" style="color: var(--text-color)">Blog</a>
                 <a href="gallery.html" class="text-decoration-none" style="color: var(--text-color)">Gallery</a>
                 <a href="pricing.html" class="text-decoration-none" style="color: var(--text-color)">Pricing</a>
                 <a href="contact.html" class="text-decoration-none" style="color: var(--text-color)">Contact</a>
@@ -504,31 +561,27 @@
                     class="text-secondary-custom">Equipment</span></h2>
             <div class="equip-slider reveal-fade-left">
                 <!-- Slide 1 -->
-                <div class="equip-card text-center">
-                    <i class="bi bi-lightbulb text-accent-custom display-4 mb-3 d-block"></i>
+                <div class="equip-card text-center" style="background-image: url('https://images.pexels.com/photos/1089455/pexels-photo-1089455.jpeg');">
                     <h4 class="fw-bold">LED Reef Lighting</h4>
                     <p class="text-muted small">Full spectrum lighting with app control for perfect coral growth.</p>
                     <a class="text-decoration-none fw-bold" href="#">Shop Lights <i class="bi bi-chevron-right"></i></a>
                 </div>
                 <!-- Slide 2 -->
-                <div class="equip-card text-center">
-                    <i class="bi bi-funnel text-secondary-custom display-4 mb-3 d-block"></i>
+                <div class="equip-card text-center" style="background-image: url('https://images.pexels.com/photos/1167050/pexels-photo-1167050.jpeg');">
                     <h4 class="fw-bold">Protein Skimmers</h4>
                     <p class="text-muted small">Ultra-quiet DC pump skimmers for crystal clear water.</p>
                     <a class="text-decoration-none fw-bold" href="#">Shop Skimmers <i
                             class="bi bi-chevron-right"></i></a>
                 </div>
                 <!-- Slide 3 -->
-                <div class="equip-card text-center">
-                    <i class="bi bi-thermometer-half text-primary display-4 mb-3 d-block"></i>
+                <div class="equip-card text-center" style="background-image: url('https://images.pexels.com/photos/1426718/pexels-photo-1426718.jpeg');">
                     <h4 class="fw-bold">Climate Control</h4>
                     <p class="text-muted small">Titanium heaters and chillers for stable temperatures.</p>
                     <a class="text-decoration-none fw-bold" href="#">Shop Climate <i
                             class="bi bi-chevron-right"></i></a>
                 </div>
                 <!-- Slide 4 -->
-                <div class="equip-card text-center">
-                    <i class="bi bi-droplet text-info display-4 mb-3 d-block"></i>
+                <div class="equip-card text-center" style="background-image: url('https://images.pexels.com/photos/1295138/pexels-photo-1295138.jpeg');">
                     <h4 class="fw-bold">Wavemakers</h4>
                     <p class="text-muted small">Gyre flow pumps to simulate natural ocean currents.</p>
                     <a class="text-decoration-none fw-bold" href="#">Shop Flow <i class="bi bi-chevron-right"></i></a>
