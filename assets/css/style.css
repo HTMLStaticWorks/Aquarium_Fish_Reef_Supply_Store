@@ -54,6 +54,20 @@ img, video {
   color: rgba(255, 255, 255, 0.6) !important;
 }
 
+[data-theme="dark"] .equip-card .text-muted {
+  color: #fff !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary {
+  color: #eaeaea !important;
+  border-color: rgba(234, 234, 234, 0.5) !important;
+}
+
+[data-theme="dark"] .btn-outline-secondary:hover {
+  background-color: #eaeaea !important;
+  color: #001220 !important;
+}
+
 body {
   font-family: var(--font-primary);
   background-color: var(--bg-color);
@@ -95,7 +109,9 @@ textarea::placeholder {
   border-radius: 30px;
   font-weight: 600;
   text-align: center;
-  display: inline-block;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary-custom:hover {
